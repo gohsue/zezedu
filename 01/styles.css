@@ -1,0 +1,43 @@
+		*{
+			text-decoration: none;
+			box-sizing: border-box;
+		}
+		html, body{
+			margin: 0px;
+			overflow: hidden;
+
+		}
+		.navbar{
+			padding-left: 30px;
+			padding-right: 30px;
+			height: 88px;
+			line-height: 88px;
+			box-shadow: 0px 2px 5px #eeeeee;
+
+		}
+		.navbar div{
+			display: inline-block;
+			height: auto;
+		}
+		.navbar img{
+			vertical-align: middle;
+		}
+		.logo img{
+			margin-top: 7px;
+			width: 180px;
+		}
+		.hmbgr{
+			float: right;
+		}
+		.helper{
+			display: inline-block;
+			vertical-align: middle;
+			height: 200vw;
+		}
+		.container{
+			display: inline-block;
+			vertical-align: middle;
+			height: 200vw;
+			width: 100vw;
+			text-align: center;
+		}

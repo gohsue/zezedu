@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<head>
+	<title>main page</title>
+	<meta charset="utf-8">
+	<link href="styles.css?after" rel="stylesheet">
+	<!-- Montserrat, Catamaran 폰트-->
+	<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+	<style>
+		.container{
+			display: inline-block;
+			vertical-align: middle;
+			height: 200vw;
+			width: 100vw;
+			text-align: center;
+			background-image: url("img/bg01.svg");
+			background-position: top center
+		}
+		.error {
+			/*세로 가운데정렬*/
+			position: absolute;
+			top: 88px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 310px;
+			margin: auto;
+
+		}
+		.errorcode{
+			display: inline-block;
+			vertical-align:middle;
+			font-family: "Catamaran", sans-serif;
+			font-size: 200px;
+			font-weight: bold;
+			letter-spacing: 5pt;
+			margin: -90px 75px -90px 90px; /*시각적보정*/
+
+			color: #FB685D;
+
+		}
+		.greyLine{
+			display: inline-block;
+			vertical-align: middle;
+			height: 140px;
+			margin-top: 15px;
+			border-left: 1px solid #707070;
+
+
+		}
+		.errorText{
+			display: inline-block;
+			vertical-align: middle;
+			text-align: left;
+			margin-top: 15px;
+			padding-left: 75px;
+			height: 140px;
+			color: #707070;
+
+		}
+		.errorText span{
+			font-family: "Montserrat", sans-serif;
+			font-size: 48px;
+			font-weight: 500; /*medium*/
+		}
+		.errorText p{
+			margin: 10px 0px 0px 0px;
+			font-family: "Montserrat", sans-serif;
+			font-size: 20px;
+			font-weight: 300;
+		}
+		.goHomeBtn{
+			width: 300px;
+			height: 70px;
+			line-height: 70px;
+			border: 1px solid red;
+			border-radius: 50px;
+			background-color: white;
+			margin-top: 70px;
+			margin-right: auto;
+			margin-left: auto;
+			color: #FB685D;
+			font-family: "Montserrat", sans-serif;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.goHomeBtn:hover{
+			color: white;
+			background-color: #FB685D;
+			border: none;
+
+		}
+
+		@media (max-width: 1051px){
+		.container{
+			background-image: url("img/bg02.svg");
+			background-size: 745px;
+		}
+		
+
+
+		.error {
+			/*세로 가운데정렬*/
+			top: 88px;
+			height: 450px;
+
+		}
+		.errorcode{
+			font-size: 11rem;
+			margin: -90px 0px -45px 0px; /*시각적보정*/
+
+		}
+		.greyLine{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 180px;
+			height: 0px;
+			border-top: 1px solid #707070;
+			border-left: none;
+		}
+		.errorText{
+			display: block;
+			vertical-align: middle;
+			text-align: center;
+			margin-top: 0px;
+			margin-left: 30vw;
+			margin-right: 30vw;
+			border-left: none;
+			padding-top: 40px;
+			padding-left: 0px;
+			height: auto;
+			color: #707070;
+
+		}
+
+		.errorText span{
+			font-family: "Montserrat", sans-serif;
+			font-size: 30px;
+			font-weight: 500; /*medium*/
+		}
+		.errorText p{
+			margin: 10px 0px 0px 0px;
+			font-family: "Montserrat", sans-serif;
+			font-size: 18px;
+			font-weight: 300;
+		}
+		.goHomeBtn{
+			width: 300px;
+			height: 70px;
+			line-height: 70px;
+			margin-top: 40px;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.goHomeBtn:hover{
+			color: white;
+			background-color: #FB685D;
+			border: none;
+
+		}
+
+		@media (max-width: 767px){
+		.container{
+			background-size: 700px;
+		}
+		.error {
+			/*세로 가운데정렬*/
+			top: 88px;
+			height: 300px;
+
+		}
+		.errorcode{
+			font-size: 8rem;
+			letter-spacing: 0;
+			margin: -90px 0px -35px 0px; /*시각적보정*/
+
+		}
+		.greyLine{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 160px;
+			height: 0px;
+			border-top: 1px solid #707070;
+			border-left: none;
+		}
+		.errorText{
+			display: block;
+			vertical-align: middle;
+			text-align: center;
+			margin-top: 0px;
+			margin-left: 10vw;
+			margin-right: 10vw;
+			border-left: none;
+			padding-top: 30px;
+			padding-left: 0px;
+			height: auto;
+			color: #707070;
+
+		}
+
+		.errorText span{
+			font-family: "Montserrat", sans-serif;
+			font-size: 24px;
+			font-weight: 500; /*medium*/
+		}
+		.errorText p{
+			margin: 10px 0px 0px 0px;
+			font-family: "Montserrat", sans-serif;
+			font-size: 14px;
+			font-weight: 300;
+		}
+		.goHomeBtn{
+			width: 300px;
+			height: 70px;
+			line-height: 70px;
+			margin-top: 30px;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.goHomeBtn:hover{
+			color: white;
+			background-color: #FB685D;
+			border: none;
+
+		}
+		}
+	</style>
+</head>
+<body>
+	<!-- 네비게이션 바 -->
+	<div class = 'navbar'>
+		<div class = 'logo'><a href="index.html"><img src=img/cherrypot.svg></a></div>
+		<div class = 'hmbgr'><img src=img/hmbgr.svg></div>
+
+	</div>
+	<div class = 'helper'><div class='container'>
+		<div class = 'error'>
+			<div class='errorcode'>404</div>
+			<div class='greyLine'></div>
+			<div class='errorText'>
+				<span>PAGE NOT FOUND</span>
+				<p>The Page You're Looking For</br>Was Not Found</p>
+			</div>
+		<div class='goHomeBtn' OnClick="location.href ='index.html'" style="cursor:pointer;">Go HOME</div>
+		</div></div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+	<title>main page</title>
+	<meta charset="utf-8">
+	<link href="styles.css?after" rel="stylesheet">
+	<!-- Montserrat, Catamaran 폰트-->
+	<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+	<script>
+		var docStyle = document.documentElement.style;
+		// setting CSS variables inside this JS where they 
+		// can be declaratively used inside the CSS file.
+		document.addEventListener('mousemove', function(e) {
+		  docStyle.setProperty('--mouse-x', e.clientX);
+		  docStyle.setProperty('--mouse-y', e.clientY);
+		});
+	</script>
+	<style>
+		.container{
+			display: inline-block;
+			vertical-align: middle;
+			height: 100vw;
+			width: 100vw;
+			text-align: center;
+		}
+		.error {
+			/*세로 가운데정렬*/
+			position: absolute;
+			top: 88px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 550px;
+			margin: auto;
+
+		}
+
+		.errorText{
+			vertical-align: middle;
+			text-align: middle;
+			font-family: "Montserrat", sans-serif;
+			font-size: 38px;
+			font-weight: 500;
+			color: #cccccc;
+
+		}
+
+		.errorImage{
+			margin: -10px auto 0 auto;
+			width: 100vw;
+			height: 410px;
+		}
+
+		.errorImage >div{
+			position: absolute;
+			width: 100vw;
+			text-align: center;
+		}
+
+		.errorImage >div>div{
+			position:relative;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.errorImage >div>div>img{
+			width: 450px;
+		}
+
+		.chr_eyes{
+			transform:
+    		translateX(calc(var(--mouse-x) * 0.005px))
+   			translateY(calc(var(--mouse-y) * 0.01px));
+		}
+
+
+		.goHomeBtn{
+			width: 300px;
+			height: 70px;
+			line-height: 70px;
+			border: 1px solid red;
+			border-radius: 50px;
+			margin-top: 20px;
+			margin-right: auto;
+			margin-left: auto;
+			color: #FB685D;
+			font-family: "Montserrat", sans-serif;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.goHomeBtn:hover{
+			color: white;
+			background-color: #FB685D;
+			border: none;
+
+		}
+
+		@media (max-width: 500px){
+		.error{
+			height: 390px;
+		}
+		.errorImage{
+			height: 270px;
+		}
+		.errorText{
+			font-size: 24px;
+		}
+		.errorImage >div>div>img{
+			width: 300px;
+		}
+
+
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 네비게이션 바 -->
+	<div class = 'navbar'>
+		<div class = 'logo'><a href="index.html"><img src=img/cherrypot.svg></a></div>
+		<div class = 'hmbgr'><img src=img/hmbgr.svg></div>
+
+	</div>
+	<div class = 'helper'><div class='container'>
+		<div class = 'error'>
+			<div class='errorText'>PAGES NOT FOUND</div>
+			<div class='errorImage'>
+				<div>	
+					<div><img src=img/chr_eyes.svg class = "chr_eyes"></div>
+				</div>	
+				<div>
+					<div><img src=img/chr.svg ></div>
+				</div>
+				
+			</div>
+			<div class='goHomeBtn' OnClick="location.href ='index.html'" style="cursor:pointer;">Go HOME</div>
+	</div></div>
+</body>
+
+</html>

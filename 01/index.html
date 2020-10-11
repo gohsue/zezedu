@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+	<title>main page</title>
+	<meta charset="utf-8">
+	<link href="styles.css?after" rel="stylesheet">
+	<!-- Montserrat, Catamaran 폰트-->
+	<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+	<script>
+		/*function ex01Btn(){
+			.alert.innerText = "ex01";
+		}
+		function ex02Btn(){
+			.alert.innerText = "ex02";
+		}*/
+	 $(document).ready(function(e) { 
+	 	//example 01
+		$('.ex01').mouseover(function(){
+			$('.text').text("예시1: 반응형");
+		});
+
+		$('.ex01').mouseout(function(){
+			$('.text').text("404 페이지");
+		});
+
+		//example 02
+
+		$('.ex02').mouseover(function(){
+			$('.text').text("예시2: 캐릭터 애니메이션");
+		});
+
+		$('.ex02').mouseout(function(){
+			$('.text').text("404 페이지");
+		});
+	
+
+
+
+
+
+	 });
+
+	</script>
+	<style>
+		.ex {
+			/*세로 가운데정렬*/
+			position: absolute;
+			top: 88px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 200px;
+			margin: auto;
+		}
+
+		.ex01, .ex02{
+			width: 300px;
+			height: 70px;
+			line-height: 70px;
+			border: 1px solid red;
+			border-radius: 50px;
+			margin-top: 20px;
+			margin-right: auto;
+			margin-left: auto;
+			color: #FB685D;
+			font-family: "Montserrat", sans-serif;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.ex01:hover{
+			color: white;
+			background-color: #FB685D;
+			border: none;
+		}
+		.ex02:hover{
+			color: white;
+			background-color: #FB685D;
+			border: none;
+
+		}
+		
+	</style>
+</head>
+<body>
+	<!-- 네비게이션 바 -->
+	<div class = 'navbar'>
+		<div class = 'logo'><a href="index.html"><img src=img/cherrypot.svg></a></div>
+		<div class = 'hmbgr'><img src=img/hmbgr.svg></div>
+
+	</div>
+	<div class = 'helper'><div class='container'>
+		<div class='ex'>
+			<span class='text'>404 페이지</span>
+			<div class='ex01' OnClick="location.href ='error.html'" style="cursor:pointer;">example 01</div>
+			<div class='ex02' OnClick="location.href ='error2.html'" style="cursor:pointer;">example 02</div>
+		</div>
+		</div></div>
+	</div>
+</body>
+
+</html>
